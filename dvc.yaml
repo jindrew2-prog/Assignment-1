@@ -1,0 +1,11 @@
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - train.py
+    - zomato_df_final_data.csv
+    outs:
+    - model.pkl
+    metrics:
+    - metrics.pkl:
+        cache: false
